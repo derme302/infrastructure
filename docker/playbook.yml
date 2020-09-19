@@ -24,6 +24,10 @@
       pip:
         name: docker
 
+    - name: Install required docker-compose deps
+      apt: name={{ item }} state=latest update_cache=yes
+      loop: [ 'python3-dev', 'libssl-dev', 'libffi-dev']
+
     - name: Install Docker-Compose Module for Python
       pip:
         name: docker-compose
