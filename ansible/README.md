@@ -17,8 +17,10 @@ Repeat this procedure for each other node you want to target.
 
 ### Running your Playbook
 
-Finally actually running the playbook is as simple as naviagting to the directory and pointing ansible at your node.
+Finally actually running the playbook is as simple as navigating to the directory and pointing ansible at your node.
 
 ```ansible-playbook -i hostname/ip, playbook.yml```
 
 Note: The `,` is important here.
+
+If a password is required for sudo privileges Append ```-K``` to the playbook command.
